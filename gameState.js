@@ -17,6 +17,7 @@ function selectRandomPhrase(phrases) {
   return encodedPhrase;
 }
 
+// declare return value of selectRandomPhrase outside of function to use as a global variable
 selectRandomPhrase(phrases) = PhraseOnScreen;
 
 let PhraseOnScreen = document.getElementById("encryptedPhrase").innerHTML;
