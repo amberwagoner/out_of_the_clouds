@@ -1,6 +1,8 @@
-// Game State Management
-import * as caesarCipher from './caesarCipher.js';
-import { phrases } from './phrases.js';
+#!/usr/bin/node
+
+import * as caesarCipher from './caesarCipher.mjs';
+import { encode } from './caesarCipher.mjs';
+import phrases from './phrases.js';
 
 /**
  * Randomly selects a phrase from an array and encodes it using the Caesar cipher with a key of 3.
@@ -11,12 +13,13 @@ function selectRandomPhrase(phrases) {
   // Select a random phrase from the array
   const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
   // Encode the phrase using the Caesar cipher with a key of 3
-  const encodedPhrase = caesarCipher.encode(randomPhrase, 3);
+  let encodedPhrase = caesarCipher.encode(randomPhrase, 3);
   return encodedPhrase;
 }
 
-// Select a random phrase from the array and encode it using the Caesar cipher with a key of 3
-const encodedPhrase = selectRandomPhrase(phrases);
+selectRandomPhrase(phrases) = PhraseOnScreen;
+
+let PhraseOnScreen = document.getElementById("encryptedPhrase").innerHTML;
 
 // Get the phrase-box element from the DOM
 const phraseBox = document.querySelector('#phrase-box');
@@ -29,4 +32,5 @@ phraseElement.textContent = caesarCipher.decode(encodedPhrase, 3);
 // Add the phrase element to the phrase-box element
 phraseBox.insertBefore(phraseElement, phraseBox.firstChild);
 
-export { encodedPhrase };
+export { PhraseOnScreen };
+export { randomPhrase };
