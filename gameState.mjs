@@ -2,8 +2,7 @@
 
 import * as caesarCipher from './caesarCipher.mjs';
 import { encode } from './caesarCipher.mjs';
-import pkg from './phrases.mjs';
-const { phrases } = pkg;
+import { phrases } from './phrases.mjs'
 
 /**
  * Randomly selects a phrase from an array and encodes it using the Caesar cipher with a key of 3.
