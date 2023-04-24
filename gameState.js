@@ -20,6 +20,7 @@ function selectRandomPhrase(phrases) {
 // declare return value of selectRandomPhrase outside of function to use as a global variable
 selectRandomPhrase(phrases) = PhraseOnScreen;
 
+//PhraseOnScreen now has an id for styling and to be an element
 let PhraseOnScreen = document.getElementById("encryptedPhrase").innerHTML;
 
 // Get the phrase-box element from the DOM
