@@ -2,7 +2,7 @@
 
 import * as caesarCipher from './caesarCipher.mjs';
 import { encode } from './caesarCipher.mjs';
-import phrases from './phrases.js';
+import { phrases } from './phrases.mjs'
 
 /**
  * Randomly selects a phrase from an array and encodes it using the Caesar cipher with a key of 3.
@@ -13,7 +13,7 @@ function selectRandomPhrase(phrases) {
   // Select a random phrase from the array
   const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
   // Encode the phrase using the Caesar cipher with a key of 3
-  let encodedPhrase = caesarCipher.encode(randomPhrase, 3);
+  const encodedPhrase = caesarCipher.encode(randomPhrase, 3);
   return encodedPhrase;
 }
 
@@ -35,4 +35,3 @@ phraseElement.textContent = caesarCipher.decode(encodedPhrase, 3);
 phraseBox.insertBefore(phraseElement, phraseBox.firstChild);
 
 export { PhraseOnScreen };
-export { randomPhrase };
