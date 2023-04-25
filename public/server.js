@@ -6,10 +6,10 @@ const host = '127.0.0.1';
 const port = 8000;
 
 const requestListener = function (req, res) {
-  const url = req.url === '/' ? '/index.html' : req.url;
-  const filePath = path.join(__dirname, 'public', url);
-  const contentType = getContentType(filePath);
-
+    const url = req.url === './public/index.html' ? req.url : '/';
+    const filePath = path.join(__dirname, 'public', url);
+    const contentType = getContentType(filePath);
+  
   fs.readFile(filePath, function(err, data) {
     if (err) {
       res.writeHead(404);
