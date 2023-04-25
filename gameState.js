@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-import * as caesarCipher from './caesarCipher.mjs';
-import { encode } from './caesarCipher.mjs';
+import * as caesarCipher from './public/scripts/caesarCipher.mjs';
+import { encode } from './public/scripts/caesarCipher.mjs';
 import phrases from './phrases.js';
 
 /**

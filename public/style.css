@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#sky {
+    background-image: url("./images/sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+#game {
+    height: 100vh;
+    background-image: url('./images/sky.jpg');
+    background-size: cover;
+    background-size: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+#clouds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+  
+.cloud {
+    width: 100px;
+    height: 70px;
+    background-image: url('./images/cloud.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+}
+  
+#decoder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+}
+  
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+#phrase-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+#encryption {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+  
+#encryptedPhrase {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+  
+label {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+  
+input[type="text"] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin-bottom: 1.2em;
+}
+  
+button[type="submit"] {
+    font-size: 1em;
+    padding: 5px 20px;
+    background-color: #5386c0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button[type="submit"]:hover {
+    background-color: #3c7cc5;
+}
+
+#objective-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+#objective-box p {
+    font-size: 1.2em;
+}

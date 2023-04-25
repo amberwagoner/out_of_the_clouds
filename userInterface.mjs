@@ -1,6 +1,6 @@
 // User Interface Interactions
-import { phrases } from './phrases.mjs';
-import * as caesarCipher from './caesarCipher.mjs';
+import { phrases } from './phrases.js';
+import * as caesarCipher from './caesarCipher.js';
 
 /**
  * Displays the encoded phrase and encryption type on the web page,
@@ -8,30 +8,19 @@ import * as caesarCipher from './caesarCipher.mjs';
  * 
  * @param {array} phrases - An array of phrases to choose from.
  */
-function displayEncodedPhrase(phrases) {
-  // Get the elements that display the encryption type and encoded phrase
-  const encryption = document.querySelector('#encryption');
-  const encodedPhraseBox = document.querySelector('#encoded-phrase');
+function displayPhrase() {
+  // Choose a random phrase from the phrases array
+  let randomIndex = Math.floor(Math.random() * phrases.length);
+  let phrase = phrases[randomIndex];
 
-  // Select a random phrase from the array
-  const phraseIndex = Math.floor(Math.random() * phrases.length);
-  const currentPhrase = phrases[phraseIndex];
+  // Encrypt the phrase using the caesarCipher function with a random shift value
+  const shift = 3;
+  let encodedPhrase = caesarCipher(phrase, shift);
 
-  // Encode the phrase using the Caesar cipher with a key of 3
-  const encodedPhrase = caesarCipher.encode(currentPhrase, 3);
-
-  // Set the content of the encryption and encoded phrase elements
-  encryption.textContent = "Encryption: Caesar Cipher, key = 3";
-  encodedPhraseBox.textContent = encodedPhrase;
-
-  // Get the element that displays the unencoded phrase
-  const phraseText = document.getElementById('phrase');
-
-  // If the element exists, set its content to the unencoded phrase
-  if (phraseText) {
-    phraseText.textContent = currentPhrase;
-  }
-}  
+  // Display the encoded phrase on the page
+  let encodedPhraseElement = document.getElementById("encoded-phrase");
+  encodedPhraseElement.textContent = encodedPhrase;
+}
 
 /**
  * Handles the submission of the phrase form.
