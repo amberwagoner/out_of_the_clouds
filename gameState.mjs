@@ -15,13 +15,16 @@ function selectRandomPhrase(phrases) {
   // Encode the phrase using the Caesar cipher with a key of 3
   const encodedPhrase = caesarCipher.encode(randomPhrase, 3);
   return encodedPhrase;
-}
+};
 
 // declare return value of selectRandomPhrase outside of function to use as a global variable
-selectRandomPhrase(phrases) = PhraseOnScreen;
+// this var needs to = the encrypted output of the server
+// then that needs to become a element in order to be styled
+ let PhraseOnScreen = selectRandomPhrase(phrases) 
 
 //PhraseOnScreen now has an id for styling and to be an element
-let PhraseOnScreen = document.getElementById("encryptedPhrase").innerHTML;
+var encryptedPhrase = document.getElementById('#encryptedPhrase').innerHTML;
+
 
 // Get the phrase-box element from the DOM
 const phraseBox = document.querySelector('#phrase-box');
