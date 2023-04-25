@@ -1,15 +1,39 @@
-import { phrases } from './phrases.mjs'
 const http = require('http');
+const fs = require('fs');
 
 const host = '127.0.0.1';
 const port = 8000;
 
 const requestListener = function (req, res) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET');
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-    res.end(randomPhrase);
+    if (req.url === '/') {
+        res.setHeader('Content-Type', 'text/html');
+        fs.readFile('index.html', function(err, data) {
+            if (err) {
+                res.writeHead(404);
+                res.write('File not found!');
+            } else {
+                res.writeHead(200);
+                res.write(data);
+            }
+            res.end();
+        });
+    } else if (req.url === '/style.css') {
+        res.setHeader('Content-Type', 'text/css');
+        fs.readFile('style.css', function(err, data) {
+            if (err) {
+                res.writeHead(404);
+                res.write('File not found!');
+            } else {
+                res.writeHead(200);
+                res.write(data);
+            }
+            res.end();
+        });
+    } else {
+        res.writeHead(404);
+        res.write('File not found!');
+        res.end();
+    }
 };
 
 const server = http.createServer(requestListener);

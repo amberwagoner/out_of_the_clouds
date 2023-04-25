@@ -59,8 +59,6 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-    position: relative;
 }
   
 #encryption {
@@ -68,13 +66,9 @@ h2 {
     margin-bottom: 1.2em;
 }
   
-#encoded-phrase {
+#encryptedPhrase {
     font-size: 1.2em;
     margin-bottom: 2em;
-    display: block;
-    z-index: 2;
-    padding: auto;
-    position: absolute
 }
   
 label {
