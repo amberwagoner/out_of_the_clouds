@@ -63,20 +63,20 @@
 ## How To Use Our MVP:
 1. Make sure the latest version of node.js is downloaded on your local machine
 2. Download zip folder of this repository
-    *Hint:* 
+    1. *Hint:* 
         1. go to the green ```<>code``` drop-down menu on the top right of the screen
         2. Select [Download ZIP] option
         3. open downloaded ZIP
 3. Open your local terminal or workspace like VSCode 
 4. Navigate to your new out_of_the_clouds-main directory using
-    *Another Hint:*
+    1.*Another Hint:*
     - use the ```cd``` command with the path to the directory in your terminal
-    **I recommend storing the code base in your Desktop**
+    ***I recommend storing the code base in your Desktop***
 5. run server.js in your terminal using this command:
     ```node server.js```
     - the output should read:
     ```Server running at http://127.0.0.1:8000/```
-    **TIP: to quit server use Ctrl+C**
+    ***TIP: to quit server use Ctrl+C***
 6. Copy the url provided in the server's output into your preferred browser
     *And Another Hint:*
         - if you are in VSCode you can hover over the link provided to redirect to your preferred browser from terminal
