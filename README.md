@@ -71,12 +71,12 @@
 4. Navigate to your new out_of_the_clouds-main directory using
     1. *Another Hint:*
     - use the ```cd``` command with the path to the directory in your terminal
-    ***I recommend storing the code base in your Desktop***
+    __I recommend storing the code base in your Desktop__
 5. run server.js in your terminal using this command:
     ```node server.js```
     - the output should read:
     ```Server running at http://127.0.0.1:8000/```
-    ***TIP: to quit server use Ctrl+C***
+    __TIP: to quit server use Ctrl+C__
 6. Copy the url provided in the server's output into your preferred browser
     *And Another Hint:*
         - if you are in VSCode you can hover over the link provided to redirect to your preferred browser from terminal
