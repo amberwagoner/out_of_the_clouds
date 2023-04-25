@@ -18,6 +18,8 @@ function selectRandomPhrase(phrases) {
 };
 
 // declare return value of selectRandomPhrase outside of function to use as a global variable
+// this var needs to = the encrypted output of the server
+// then that needs to become a element in order to be styled
  let PhraseOnScreen = selectRandomPhrase(phrases) 
 
 //PhraseOnScreen now has an id for styling and to be an element
