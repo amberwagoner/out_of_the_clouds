@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 import * as caesarCipher from './caesarCipher.mjs';
-import { encode } from './caesarCipher.mjs';
 import { phrases } from './phrases.mjs'
 
 /**
@@ -12,6 +11,7 @@ import { phrases } from './phrases.mjs'
 function selectRandomPhrase(phrases) {
   // Select a random phrase from the array
   const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+  const phrases = randomPhrase;
   // Encode the phrase using the Caesar cipher with a key of 3
   const encodedPhrase = caesarCipher.encode(randomPhrase, 3);
   return encodedPhrase;
