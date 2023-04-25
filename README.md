@@ -69,7 +69,7 @@
         3. open downloaded ZIP
 3. Open your local terminal or workspace like VSCode 
 4. Navigate to your new out_of_the_clouds-main directory using
-    1.*Another Hint:*
+    1. *Another Hint:*
     - use the ```cd``` command with the path to the directory in your terminal
     ***I recommend storing the code base in your Desktop***
 5. run server.js in your terminal using this command:
