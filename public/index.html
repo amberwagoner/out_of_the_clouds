@@ -11,14 +11,18 @@
   </head>
   <body>
     <div id="game">
-      <div src="./images/sky.jpg" type="image/jpg" id="sky"></div>
       <div id="objective-box">
         <h1>out of the clouds</h1>
         <h2>feeling overwhelmed?</h2>
         <p>take a breath, get your head out of the clouds, and become more present in this moment.</p>
         <p>decode the positive message hidden in the encrypted phrase to make the clouds disappear and reveal a clear sky.</p>
       </div>
-      <div src="./images/cloud.png"  type="image/png" id="clouds">
+      <div type="image/png" id="clouds">
+        <script>
+          var container = document.getElementById("clouds");
+          container.innerHTML = '<img src="cloud.png"';
+        </script>
+        
         <div class="cloud"></div>
         <div class="cloud"></div>
         <div class="cloud"></div>
