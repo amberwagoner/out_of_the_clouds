@@ -36,7 +36,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f9f9f9;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -45,6 +44,12 @@ body {
   
 h1 {
     font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -57,39 +62,38 @@ h1 {
 }
   
 #encryption {
-    font-size: 12px;
+    font-size: 1.2em;
     margin-bottom: 1.2em;
 }
   
 #encryptedPhrase {
-    font-size: 12px;
+    font-size: 1.2em;
     margin-bottom: 2em;
 }
   
 label {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 1.2em;
 }
   
 input[type="text"] {
     font-size: 1.2em;
     padding: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 1.2em;
 }
   
 button[type="submit"] {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 5px 20px;
-    background-color: #4ba3c7;
+    background-color: #5386c0;
     border: none;
-    color: #fff;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
   
 button[type="submit"]:hover {
-    background-color: #387c9d;
+    background-color: #3c7cc5;
 }
 
 #objective-box {
@@ -100,7 +104,6 @@ button[type="submit"]:hover {
     margin: 0 auto;
     width: 70%;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
     z-index: 1;
 }
