@@ -1,7 +1,7 @@
 // User Interface Interactions
 import { phrases } from './phrases.js';
 import * as caesarCipher from './caesarCipher.js';
-import { selectRandomPhrase } from './gameState.mjs';
+import { selectRandomPhrase } from './public/gameState.mjs';
 
 /**
  * Displays the encoded phrase and encryption type on the web page,
