@@ -1,6 +1,7 @@
 // User Interface Interactions
 import { phrases } from './phrases.js';
 import * as caesarCipher from './caesarCipher.js';
+import { selectRandomPhrase } from './public/gameState.mjs';
 
 /**
  * Displays the encoded phrase and encryption type on the web page,
@@ -8,30 +9,23 @@ import * as caesarCipher from './caesarCipher.js';
  * 
  * @param {array} phrases - An array of phrases to choose from.
  */
-function displayEncodedPhrase(phrases) {
-  // Get the elements that display the encryption type and encoded phrase
-  const encryption = document.querySelector('#encryption');
-  const encodedPhraseBox = document.querySelector('#encoded-phrase');
+import * as gameState from './gameState.js';
+import * as caesarCipher from './caesarCipher.js';
 
-  // Select a random phrase from the array
-  const phraseIndex = Math.floor(Math.random() * phrases.length);
-  const currentPhrase = phrases[phraseIndex];
+function displayPhrase(phrases) {
+  const phraseBox = document.getElementById('phrase-box');
+  const encryption = document.getElementById('encryption');
+  const encodedPhraseBox = document.getElementById('encoded-phrase');
+  const phrase = gameState.selectrandomPhrase(phrases);
+  const encodedPhrase = caesarCipher.encode(phrase, 3);
 
-  // Encode the phrase using the Caesar cipher with a key of 3
-  const encodedPhrase = caesarCipher.encode(currentPhrase, 3);
-
-  // Set the content of the encryption and encoded phrase elements
-  encryption.textContent = "Encryption: Caesar Cipher, key = 3";
+  encryption.textContent = 'Encryption: Caesar Cipher, key = 3';
   encodedPhraseBox.textContent = encodedPhrase;
+  phraseBox.style.display = 'block';
+}
 
-  // Get the element that displays the unencoded phrase
-  const phraseText = document.getElementById('phrase');
+export { displayPhrase };
 
-  // If the element exists, set its content to the unencoded phrase
-  if (phraseText) {
-    phraseText.textContent = currentPhrase;
-  }
-}  
 
 /**
  * Handles the submission of the phrase form.

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>out of the clouds</title>
+    <script type="text/JavaScript" src="./scripts/caesarCipher.mjs"></script>
+    <script type="text/JavaScript" src="./scripts/phrases.mjs"></script>
+    <script type="text/JavaScript" src="./scripts/gameState.mjs"></script>
+    <script type="text/JavaScript" src="./scripts/userInterface.mjs"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="game">
+      <div id="objective-box">
+        <h1>out of the clouds</h1>
+        <h2>feeling overwhelmed?</h2>
+        <p>take a breath, get your head out of the clouds, and become more present in this moment.</p>
+        <p>decode the positive message hidden in the encrypted phrase to make the clouds disappear and reveal a clear sky.</p>
+      </div>
+      <div type="image/png" id="clouds">
+        <script>
+          var container = document.getElementById("clouds");
+          container.innerHTML = '<img src="cloud.png"';
+        </script>
+        
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+      </div>
+      <div id="decoder">
+        <div id="phrase-box">
+          <script type="text/JavaScript" src="./public/userInterface.mjs"></script>
+        <div id="encryption"></div>
+        <div id="encoded-phrase"></div>
+          <script type="text/JavaScript" src="./scripts/userInterface.mjs"></script>
+          <div id="phrases"></div>
+          <script type="text/JavaScript" src="./scripts/phrases.mjs"></script>
+          <form id="phrase-form">
+            <label for="phrase-input">enter your guess:</label>
+            <input type="text" id="phrase-input" name="phrase" required>
+            <button type="submit">submit</button>
+          </form>
+          <div id="result"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
