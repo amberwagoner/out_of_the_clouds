@@ -33,4 +33,5 @@ function encode(plaintext, key) {
     return encode(ciphertext, 26 - key);
   }
   
-  export { encode, decode };
+  export { encode };
+  export { decode };
