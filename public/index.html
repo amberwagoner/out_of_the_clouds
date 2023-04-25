@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>out of the clouds</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="game">
+      <div id="sky"></div>
+      <div id="objective-box">
+        <h1>out of the clouds</h1>
+        <h2>feeling overwhelmed?</h2>
+        <p>take a breath, get your head out of the clouds, and become more present in this moment.</p>
+        <p>decode the positive message hidden in the encrypted phrase to make the clouds disappear and reveal a clear sky.</p>
+      </div>
+      <div id="clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+      </div>
+      <div id="decoder">
+        <div id="phrase-box">
+        <div id="encryption"></div>
+        <div id="encoded-phrase"></div>
+          <div id="phrases"></div>
+          <form id="phrase-form">
+            <label for="phrase-input">enter your guess:</label>
+            <input type="text" id="phrase-input" name="phrase" required>
+            <button type="submit">submit</button>
+          </form>
+          <div id="result"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/JavaScript" src="./caesarCipher.mjs"></script>
+    <script type="module" src="./phrases.mjs"></script>
+    <script type="module" src="./gameState.mjs"></script>
+    <script type="module" src="./userInterface.mjs"></script>
+  </body>
+</html>
